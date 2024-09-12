@@ -10,7 +10,7 @@ const DataVisualization = ({ apiEndpoint, queryParam, queryValue }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:7000/api${apiEndpoint}`, {
+                const response = await axios.get(`http://localhost:3000/api${apiEndpoint}`, {
                     params: { [queryParam]: queryValue }
                 });
                 setData(response.data);
